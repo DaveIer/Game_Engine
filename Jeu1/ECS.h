@@ -21,7 +21,7 @@ using ComponentArray = std::array<Component*, maxComponents>;
 /// <summary> Returns a new ComponentTypeID </summary>
 inline ComponentTypeID getNewComponentTypeID()
 {
-	static ComponentTypeID lastID = 0;
+	static ComponentTypeID lastID = 0u;
 	return lastID++;
 }
 

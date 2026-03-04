@@ -34,7 +34,7 @@ Vector2D& Vector2D::operator*(const int& i)
 
 Vector2D& Vector2D::operator/=(const Vector2D& vec)
 {
-	if (vec.x == 0 && vec.y == 0) throw std::exception("Division by 0 in \"Vector2D& Vector2D::operator/=(const Vector2D& vec)\"");
+	if (vec.x == 0 || vec.y == 0) throw std::invalid_argument("Division by 0 in \"Vector2D& Vector2D::operator/=(const Vector2D& vec)\"");
 	x /= vec.x;
 	y /= vec.y;
 
